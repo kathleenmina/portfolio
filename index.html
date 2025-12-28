@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kathleen Mina | Business Intelligence Portfolio</title>
+  <title>Kathleen Mina | Data Analytics Student Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <style>
     :root {
-      --primary: #1e3a8a;
+      --primary: #2563eb;
       --primary-light: #3b82f6;
-      --secondary: #8b5cf6;
+      --secondary: #7c3aed;
       --accent: #06b6d4;
+      --accent-light: #22d3ee;
       --bg-dark: #0f172a;
       --bg-light: #f8fafc;
       --bg-card: #ffffff;
@@ -19,12 +21,13 @@
       --text-light: #64748b;
       --text-white: #f1f5f9;
       --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-      --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 50%);
-      --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
-      --shadow-md: 0 8px 30px rgba(0, 0, 0, 0.08);
-      --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.1);
-      --radius: 12px;
-      --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+      --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+      --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.1);
+      --radius: 10px;
+      --radius-lg: 16px;
+      --transition: all 0.3s ease;
     }
 
     * {
@@ -34,11 +37,16 @@
     }
 
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--text-main);
       background: var(--bg-light);
-      line-height: 1.7;
+      line-height: 1.6;
       overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
     }
 
     /* Smooth scroll */
@@ -46,11 +54,11 @@
       scroll-behavior: smooth;
     }
 
-    /* HEADER */
+    /* HEADER - Student Focus */
     header {
       background: var(--gradient-primary);
       color: white;
-      padding: 100px 20px 120px;
+      padding: 80px 20px 100px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -63,72 +71,110 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-      opacity: 0.3;
-      z-index: 0;
+      background: radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.05) 0%, transparent 50%);
     }
 
     .header-content {
       position: relative;
-      z-index: 1;
-      max-width: 800px;
+      z-index: 2;
+      max-width: 900px;
       margin: 0 auto;
     }
 
-    .profile-icon {
-      width: 100px;
-      height: 100px;
+    .student-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .profile-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .profile-avatar {
+      width: 120px;
+      height: 120px;
       background: rgba(255, 255, 255, 0.1);
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 auto 25px;
-      font-size: 40px;
+      font-size: 48px;
       border: 3px solid rgba(255, 255, 255, 0.2);
       backdrop-filter: blur(5px);
+      flex-shrink: 0;
+    }
+
+    .profile-text {
+      text-align: left;
+      max-width: 500px;
     }
 
     header h1 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
       font-weight: 700;
       letter-spacing: -0.5px;
     }
 
-    .tagline {
+    .subtitle {
       font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto 30px;
       opacity: 0.9;
+      margin-bottom: 15px;
       font-weight: 400;
     }
 
-    .tech-tags {
+    .university {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      opacity: 0.85;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .university i {
+      color: #fbbf24;
+    }
+
+    .tech-stack {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 10px;
-      margin-top: 30px;
+      gap: 12px;
+      margin-top: 35px;
     }
 
-    .tech-tag {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 8px 16px;
+    .tech-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
       border-radius: 50px;
       font-size: 0.9rem;
       font-weight: 500;
       backdrop-filter: blur(5px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
       transition: var(--transition);
     }
 
-    .tech-tag:hover {
-      background: rgba(255, 255, 255, 0.25);
+    .tech-item:hover {
+      background: rgba(255, 255, 255, 0.2);
       transform: translateY(-2px);
     }
 
-    /* SECTION WRAPPERS */
+    /* SECTION STYLES */
     section {
       padding: 80px 20px;
     }
@@ -138,205 +184,198 @@
       margin: 0 auto;
     }
 
-    section.alt {
+    .section-alt {
       background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-      position: relative;
     }
 
-    section.alt::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%231e3a8a' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
     h2 {
       font-size: 2rem;
-      margin-bottom: 40px;
       color: var(--primary);
       position: relative;
       display: inline-block;
-      font-weight: 700;
+    }
+
+    h2 .highlight {
+      color: var(--secondary);
     }
 
     h2::after {
       content: "";
       display: block;
-      width: 80px;
-      height: 5px;
+      width: 60px;
+      height: 4px;
       background: var(--gradient-accent);
-      margin-top: 12px;
-      border-radius: 4px;
+      margin-top: 8px;
+      border-radius: 2px;
     }
 
-    .section-intro {
+    .section-tagline {
       font-size: 1.1rem;
       color: var(--text-light);
       max-width: 800px;
-      margin-bottom: 50px;
-      line-height: 1.8;
+      margin-bottom: 40px;
+      line-height: 1.7;
     }
 
-    /* ABOUT */
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
-    }
-
-    @media (max-width: 768px) {
-      .about-content {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    .about-box {
+    /* ABOUT / OBJECTIVE */
+    .objective-card {
       background: var(--bg-card);
       padding: 40px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-lg);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
       border-left: 5px solid var(--accent);
       transition: var(--transition);
     }
 
-    .about-box:hover {
+    .objective-card:hover {
       transform: translateY(-5px);
       box-shadow: var(--shadow-lg);
     }
 
-    .about-text p {
-      margin-bottom: 20px;
+    .objective-text {
       font-size: 1.05rem;
+      line-height: 1.8;
+      margin-bottom: 30px;
     }
 
-    .about-stats {
+    .education-details {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
       margin-top: 30px;
     }
 
-    .stat {
-      text-align: center;
-      padding: 20px 15px;
+    .education-item {
       background: var(--bg-light);
+      padding: 25px;
       border-radius: var(--radius);
       border: 1px solid #e2e8f0;
     }
 
-    .stat-value {
-      font-size: 2rem;
-      font-weight: 700;
+    .education-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
       color: var(--primary);
-      margin-bottom: 5px;
     }
 
-    .stat-label {
+    .education-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
       font-size: 0.9rem;
       color: var(--text-light);
     }
 
+    .badge {
+      display: inline-block;
+      background: var(--gradient-accent);
+      color: white;
+      padding: 4px 12px;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
     /* PROJECTS */
-    .project-grid {
+    .projects-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-      gap: 35px;
+      gap: 30px;
     }
 
-    .project {
+    .project-card {
       background: var(--bg-card);
-      padding: 35px;
-      border-radius: var(--radius);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
       box-shadow: var(--shadow-md);
       transition: var(--transition);
-      border-top: 4px solid var(--primary-light);
-      position: relative;
-      overflow: hidden;
+      border: 1px solid #f1f5f9;
     }
 
-    .project::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 4px;
-      background: var(--gradient-accent);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .project:hover {
-      transform: translateY(-10px);
+    .project-card:hover {
+      transform: translateY(-8px);
       box-shadow: var(--shadow-lg);
     }
 
-    .project:hover::before {
-      transform: scaleX(1);
+    .project-header {
+      padding: 25px 25px 15px;
+      border-bottom: 1px solid #f1f5f9;
     }
 
-    .project-icon {
-      font-size: 2.5rem;
-      color: var(--primary-light);
-      margin-bottom: 20px;
-    }
-
-    .project h3 {
-      margin-top: 0;
+    .project-header h3 {
+      font-size: 1.3rem;
       margin-bottom: 10px;
-      font-size: 1.4rem;
       color: var(--text-main);
-      font-weight: 600;
     }
 
-    .tools {
+    .project-course {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .project-body {
+      padding: 20px 25px;
+    }
+
+    .project-tech {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
       margin-bottom: 20px;
     }
 
-    .tool-tag {
+    .tech-badge {
       background: #e0f2fe;
       color: #0369a1;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 50px;
       font-size: 0.85rem;
       font-weight: 500;
     }
 
-    .tool-tag.sql {
-      background: #f0f9ff;
-      color: #0c4a6e;
-    }
-
-    .tool-tag.tableau {
+    .tech-badge.tableau {
       background: #fef3c7;
       color: #92400e;
     }
 
-    .tool-tag.python {
+    .tech-badge.sql {
+      background: #dcfce7;
+      color: #166534;
+    }
+
+    .tech-badge.python {
       background: #f3e8ff;
-      color: #5b21b6;
+      color: #6b21a8;
     }
 
-    .project ul {
+    .tech-badge.web {
+      background: #ffe4e6;
+      color: #9f1239;
+    }
+
+    .project-list {
       padding-left: 20px;
-      margin-top: 15px;
     }
 
-    .project li {
+    .project-list li {
       margin-bottom: 10px;
       position: relative;
     }
 
-    .project li::before {
-      content: "▸";
+    .project-list li::before {
+      content: "→";
       color: var(--accent);
       font-weight: bold;
       display: inline-block;
@@ -345,7 +384,7 @@
     }
 
     /* SKILLS */
-    .skills-grid {
+    .skills-container {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 25px;
@@ -355,17 +394,16 @@
       background: var(--bg-card);
       padding: 30px;
       border-radius: var(--radius);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-sm);
       transition: var(--transition);
     }
 
     .skill-category:hover {
-      transform: translateY(-5px);
-      box-shadow: var(--shadow-lg);
+      box-shadow: var(--shadow-md);
     }
 
     .skill-category h3 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin-bottom: 20px;
       color: var(--primary);
       display: flex;
@@ -383,7 +421,7 @@
       gap: 10px;
     }
 
-    .skill-item {
+    .skill-tag {
       background: var(--bg-light);
       padding: 8px 16px;
       border-radius: 50px;
@@ -393,11 +431,100 @@
       border: 1px solid #e2e8f0;
     }
 
+    /* ACHIEVEMENTS */
+    .achievements-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    .achievement-card {
+      background: var(--bg-card);
+      padding: 25px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid transparent;
+      border-image: var(--gradient-primary);
+      border-image-slice: 1;
+      transition: var(--transition);
+    }
+
+    .achievement-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .achievement-card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .achievement-card h3 i {
+      color: var(--secondary);
+    }
+
+    .achievement-date {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      margin-top: 5px;
+    }
+
+    /* CALL TO ACTION */
+    .cta-section {
+      text-align: center;
+      padding: 60px 20px;
+      background: var(--gradient-primary);
+      color: white;
+      border-radius: var(--radius-lg);
+      margin: 40px auto;
+      max-width: 900px;
+    }
+
+    .cta-section h2 {
+      color: white;
+      margin-bottom: 20px;
+    }
+
+    .cta-section h2::after {
+      background: var(--gradient-accent);
+      margin: 10px auto;
+    }
+
+    .cta-text {
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      opacity: 0.9;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: white;
+      color: var(--primary);
+      padding: 15px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .cta-button:hover {
+      background: transparent;
+      color: white;
+      border-color: white;
+      transform: translateY(-3px);
+    }
+
     /* FOOTER */
     footer {
       background: var(--bg-dark);
       color: var(--text-white);
-      padding: 70px 20px 40px;
+      padding: 60px 20px 30px;
       position: relative;
     }
 
@@ -415,77 +542,49 @@
       max-width: 1100px;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: center;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
     }
 
-    @media (max-width: 768px) {
-      .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-      }
-    }
-
-    .footer-text h3 {
-      font-size: 1.5rem;
-      margin-bottom: 15px;
+    .footer-col h3 {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
       color: white;
     }
 
-    .footer-text p {
+    .footer-col p {
       color: #cbd5e1;
-      max-width: 400px;
+      margin-bottom: 15px;
     }
 
     .contact-links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: flex-end;
-    }
-
-    @media (max-width: 768px) {
-      .contact-links {
-        justify-content: center;
-      }
+      flex-direction: column;
+      gap: 15px;
     }
 
     .contact-link {
       display: flex;
       align-items: center;
-      gap: 10px;
-      background: rgba(255, 255, 255, 0.05);
-      padding: 15px 25px;
-      border-radius: var(--radius);
+      gap: 12px;
       color: white;
       text-decoration: none;
-      font-weight: 500;
       transition: var(--transition);
-      border: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .contact-link:hover {
-      background: rgba(255, 255, 255, 0.1);
-      transform: translateY(-3px);
+      color: var(--accent-light);
+      transform: translateX(5px);
     }
 
     .contact-link i {
-      font-size: 1.2rem;
-    }
-
-    .contact-link.email i {
-      color: #ea4335;
-    }
-
-    .contact-link.linkedin i {
-      color: #0a66c2;
+      width: 20px;
     }
 
     .copyright {
       text-align: center;
-      margin-top: 50px;
-      padding-top: 20px;
+      padding-top: 30px;
       border-top: 1px solid rgba(255, 255, 255, 0.1);
       color: #94a3b8;
       font-size: 0.9rem;
@@ -494,41 +593,51 @@
     /* RESPONSIVE */
     @media (max-width: 768px) {
       header {
-        padding: 70px 20px 90px;
+        padding: 60px 20px 80px;
+      }
+      
+      .profile-container {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .profile-text {
+        text-align: center;
       }
       
       header h1 {
-        font-size: 2.2rem;
-      }
-      
-      h2 {
-        font-size: 1.7rem;
+        font-size: 2rem;
       }
       
       section {
         padding: 60px 16px;
       }
       
-      .project-grid, .skills-grid {
+      h2 {
+        font-size: 1.7rem;
+      }
+      
+      .projects-grid, .skills-container, .achievements-container {
         grid-template-columns: 1fr;
       }
       
-      .about-stats {
-        grid-template-columns: repeat(2, 1fr);
+      .objective-card, .education-item, .project-card, .skill-category {
+        padding: 25px;
       }
     }
 
     @media (max-width: 480px) {
-      .about-stats {
-        grid-template-columns: 1fr;
-      }
-      
-      .tech-tags {
+      .tech-stack {
         justify-content: center;
       }
       
-      .contact-links {
-        flex-direction: column;
+      .tech-item {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+      }
+      
+      .cta-button {
+        padding: 12px 30px;
       }
     }
   </style>
@@ -538,142 +647,179 @@
 
 <header>
   <div class="header-content">
-    <div class="profile-icon">
-      <i class="fas fa-chart-line"></i>
+    <div class="student-badge">
+      <i class="fas fa-graduation-cap"></i> Data Analytics Student
     </div>
-    <h1>Kathleen Marie R. Mina</h1>
-    <p class="tagline">
-      <strong>Business Intelligence & Analytics Specialist</strong><br>
-      Transforming raw data into actionable insights through intuitive dashboards and strategic analysis
-    </p>
     
-    <div class="tech-tags">
-      <span class="tech-tag">Tableau</span>
-      <span class="tech-tag">SQL</span>
-      <span class="tech-tag">Dashboard Optimization</span>
-      <span class="tech-tag">Data Visualization</span>
-      <span class="tech-tag">Performance Analysis</span>
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">Apache Airflow</span>
+    <div class="profile-container">
+      <div class="profile-avatar">
+        <i class="fas fa-chart-line"></i>
+      </div>
+      <div class="profile-text">
+        <h1>Kathleen Marie R. Mina</h1>
+        <p class="subtitle">Business Intelligence & Data Analytics Student</p>
+        <p>Specializing in dashboard optimization, data visualization, and analytics solutions that support data-driven decision-making.</p>
+      </div>
+    </div>
+    
+    <div class="university">
+      <i class="fas fa-university"></i>
+      <span>Bachelor of Science in Data Science and Analytics • University of Santo Tomas • Dean's Lister (2023-2025)</span>
+    </div>
+    
+    <div class="tech-stack">
+      <span class="tech-item">Tableau</span>
+      <span class="tech-item">SQL</span>
+      <span class="tech-item">Python</span>
+      <span class="tech-item">Data Visualization</span>
+      <span class="tech-item">Dashboard Design</span>
+      <span class="tech-item">R</span>
+      <span class="tech-item">Excel</span>
+      <span class="tech-item">HTML/PHP</span>
     </div>
   </div>
 </header>
 
 <section>
   <div class="container">
-    <h2>About Me</h2>
-    <p class="section-intro">Data Science and Analytics professional with a passion for turning complex data into clear, actionable insights that drive business decisions.</p>
+    <div class="section-header">
+      <h2>About <span class="highlight">Me</span></h2>
+    </div>
     
-    <div class="about-content">
-      <div class="about-box">
-        <div class="about-text">
-          <p>I'm a Business Intelligence specialist focused on creating optimized dashboards, tracking KPIs, and developing analytics solutions that support data-driven decision-making across organizations.</p>
-          <p>My approach combines technical expertise with business acumen to deliver insights that are not only accurate but also actionable and aligned with strategic goals.</p>
-        </div>
-        
-        <div class="about-stats">
-          <div class="stat">
-            <div class="stat-value">15+</div>
-            <div class="stat-label">Dashboards</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">100%</div>
-            <div class="stat-label">Client Satisfaction</div>
-          </div>
-          <div class="stat">
-            <div class="stat-value">3+</div>
-            <div class="stat-label">Years Experience</div>
-          </div>
-        </div>
+    <div class="objective-card">
+      <div class="objective-text">
+        <p>I am a Data Science and Analytics student at the University of Santo Tomas with a strong academic record as a Dean's Lister. My coursework and projects have provided me with hands-on experience in designing interactive Tableau dashboards, KPI tracking, and analytics solutions that support data-driven decision-making.</p>
+        <p>I am actively seeking internship opportunities where I can apply my skills in business intelligence, data visualization, and analytics to solve real-world problems and contribute to data-driven decision-making processes.</p>
       </div>
       
-      <div class="about-box">
-        <h3 style="margin-top: 0; margin-bottom: 20px; color: var(--primary);">My Focus Areas</h3>
-        <ul style="list-style: none; padding-left: 0;">
-          <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-            <i class="fas fa-check-circle" style="color: var(--accent); position: absolute; left: 0;"></i>
-            <strong>Dashboard Optimization:</strong> Creating intuitive, performance-driven BI dashboards
-          </li>
-          <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-            <i class="fas fa-check-circle" style="color: var(--accent); position: absolute; left: 0;"></i>
-            <strong>Data Storytelling:</strong> Transforming complex data into compelling narratives
-          </li>
-          <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-            <i class="fas fa-check-circle" style="color: var(--accent); position: absolute; left: 0;"></i>
-            <strong>KPI Development:</strong> Designing metrics that accurately track business performance
-          </li>
-          <li style="margin-bottom: 15px; padding-left: 25px; position: relative;">
-            <i class="fas fa-check-circle" style="color: var(--accent); position: absolute; left: 0;"></i>
-            <strong>Process Automation:</strong> Streamlining data workflows for efficiency
-          </li>
-        </ul>
+      <div class="education-details">
+        <div class="education-item">
+          <h3>University of Santo Tomas</h3>
+          <p>Bachelor of Science in Data Science and Analytics</p>
+          <div class="education-meta">
+            <span>Manila, Philippines</span>
+            <span>2023 - Present</span>
+          </div>
+          <div class="badge">Dean's Lister</div>
+        </div>
+        
+        <div class="education-item">
+          <h3>Learning Focus</h3>
+          <p>Dashboard Optimization, Data Visualization, Performance Analysis, Data Warehousing, Statistical Modeling</p>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="alt">
+<section class="section-alt">
   <div class="container">
-    <h2>Featured Projects</h2>
-    <p class="section-intro">A selection of my recent work showcasing expertise in data visualization, dashboard development, and business intelligence solutions.</p>
+    <div class="section-header">
+      <h2>Academic <span class="highlight">Projects</span></h2>
+    </div>
+    <p class="section-tagline">Hands-on projects from my coursework demonstrating practical application of data analytics and business intelligence concepts.</p>
     
-    <div class="project-grid">
-      <div class="project">
-        <div class="project-icon">
-          <i class="fas fa-chart-bar"></i>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-header">
+          <h3>BI Dashboards – Top 1000 Companies</h3>
+          <div class="project-course">Information Presentation & Visualization Project</div>
         </div>
-        <h3>BI Dashboards – Top 1000 Companies</h3>
-        <div class="tools">
-          <span class="tool-tag tableau">Tableau</span>
-          <span class="tool-tag">Excel</span>
-          <span class="tool-tag">Data Analysis</span>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-badge tableau">Tableau</span>
+            <span class="tech-badge">Excel</span>
+            <span class="tech-badge">Data Analysis</span>
+          </div>
+          <p>Interactive Tableau dashboard analyzing revenue data from the Top 1,000 corporations across multiple industry sectors.</p>
+          <ul class="project-list">
+            <li>Visualized top companies by gross revenue with dynamic ranking filters</li>
+            <li>Implemented interactive filters for flexible navigation and comparison</li>
+            <li>Enabled performance analysis across different industry sectors</li>
+          </ul>
         </div>
-        <p>Comprehensive analysis of revenue data from the top 1,000 global companies to support performance comparison and strategic insight discovery.</p>
-        <ul>
-          <li>Built interactive ranking dashboards for company and industry performance comparison</li>
-          <li>Implemented dynamic filters and parameters for focused, user-driven analysis</li>
-          <li>Identified revenue concentration trends and market positioning insights</li>
-          <li>Reduced data retrieval time by 60% through optimized data models</li>
-        </ul>
       </div>
-
-      <div class="project">
-        <div class="project-icon">
-          <i class="fas fa-shopping-cart"></i>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Online Shopping Platform Analytics</h3>
+          <div class="project-course">Data Warehousing & Analytics Project</div>
         </div>
-        <h3>E-Commerce Analytics Platform</h3>
-        <div class="tools">
-          <span class="tool-tag tableau">Tableau</span>
-          <span class="tool-tag sql">SQL</span>
-          <span class="tool-tag python">Python</span>
-          <span class="tool-tag">Apache Airflow</span>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-badge tableau">Tableau</span>
+            <span class="tech-badge sql">SQL</span>
+            <span class="tech-badge">Kimball Modeling</span>
+            <span class="tech-badge">Data Pipeline</span>
+          </div>
+          <p>End-to-end analytics solution with dimensional data warehouse and automated Tableau dashboard.</p>
+          <ul class="project-list">
+            <li>Designed dimensional data warehouse using Kimball modeling</li>
+            <li>Developed automated Tableau dashboard to answer business questions</li>
+            <li>Translated analytics results into stakeholder-ready visual insights</li>
+          </ul>
         </div>
-        <p>End-to-end automated analytics solution for online retail business answering critical business questions and monitoring platform performance.</p>
-        <ul>
-          <li>Designed KPI-focused dashboards tracking sales, customer behavior, and inventory</li>
-          <li>Visualized sales trends, category performance, and customer segmentation</li>
-          <li>Automated data pipeline refresh using Airflow, reducing manual work by 80%</li>
-          <li>Implemented predictive models for sales forecasting with 94% accuracy</li>
-        </ul>
       </div>
-
-      <div class="project">
-        <div class="project-icon">
-          <i class="fas fa-wallet"></i>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Monthly Money Tracker Dashboard</h3>
+          <div class="project-course">Data Visualization Project</div>
         </div>
-        <h3>Financial Intelligence Dashboard</h3>
-        <div class="tools">
-          <span class="tool-tag tableau">Tableau</span>
-          <span class="tool-tag">Excel</span>
-          <span class="tool-tag">Budget Analysis</span>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-badge tableau">Tableau</span>
+            <span class="tech-badge">Excel</span>
+            <span class="tech-badge">Financial Analytics</span>
+          </div>
+          <p>Interactive two-page dashboard for personal finance tracking and analysis.</p>
+          <ul class="project-list">
+            <li>Connected directly to Excel data source for easy updates</li>
+            <li>Implemented filters by year, category, and transaction date</li>
+            <li>Enabled users to track spending behavior and financial status</li>
+          </ul>
         </div>
-        <p>Interactive personal finance dashboard providing deep insights into spending habits, saving patterns, and financial health trends.</p>
-        <ul>
-          <li>Tracked and categorized expenses across multiple accounts over time</li>
-          <li>Implemented dynamic category and date filters for granular analysis</li>
-          <li>Identified recurring spending patterns and optimization opportunities</li>
-          <li>Created forecasting models for budget planning and financial goals</li>
-        </ul>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Sign Language Translator</h3>
+          <div class="project-course">Computer Vision Project</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-badge python">Python</span>
+            <span class="tech-badge">TensorFlow</span>
+            <span class="tech-badge">Computer Vision</span>
+          </div>
+          <p>Real-time sign language translation system using computer vision techniques.</p>
+          <ul class="project-list">
+            <li>Developed using Python and TensorFlow for real-time translation</li>
+            <li>Led project workflow including dataset preparation and model training</li>
+            <li>Applied machine learning techniques for gesture recognition</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="project-card">
+        <div class="project-header">
+          <h3>Online Food Delivery System</h3>
+          <div class="project-course">Information Management Project</div>
+        </div>
+        <div class="project-body">
+          <div class="project-tech">
+            <span class="tech-badge web">HTML</span>
+            <span class="tech-badge web">PHP</span>
+            <span class="tech-badge sql">MySQL</span>
+            <span class="tech-badge">Full-Stack</span>
+          </div>
+          <p>Full-stack web application for online food ordering and delivery management.</p>
+          <ul class="project-list">
+            <li>Designed and implemented complete system using HTML, PHP, and MySQL</li>
+            <li>Created user interfaces for login, registration, menu browsing, and ordering</li>
+            <li>Developed backend database structure and business logic</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -681,92 +827,155 @@
 
 <section>
   <div class="container">
-    <h2>Skills & Expertise</h2>
-    <p class="section-intro">A comprehensive toolkit of technical skills and business intelligence expertise developed through hands-on projects and continuous learning.</p>
+    <div class="section-header">
+      <h2>Skills & <span class="highlight">Expertise</span></h2>
+    </div>
     
-    <div class="skills-grid">
+    <div class="skills-container">
       <div class="skill-category">
-        <h3><i class="fas fa-chart-pie"></i> BI & Analytics</h3>
+        <h3><i class="fas fa-chart-bar"></i> Business Intelligence</h3>
         <div class="skill-items">
-          <span class="skill-item">Dashboard Optimization</span>
-          <span class="skill-item">KPI Design</span>
-          <span class="skill-item">Data Visualization</span>
-          <span class="skill-item">Trend Analysis</span>
-          <span class="skill-item">Performance Metrics</span>
-          <span class="skill-item">Business Intelligence</span>
+          <span class="skill-tag">Dashboard Optimization</span>
+          <span class="skill-tag">Data Visualization</span>
+          <span class="skill-tag">KPI Tracking</span>
+          <span class="skill-tag">Performance Analysis</span>
+          <span class="skill-tag">Data Storytelling</span>
         </div>
       </div>
       
       <div class="skill-category">
-        <h3><i class="fas fa-code"></i> Technical</h3>
+        <h3><i class="fas fa-code"></i> Technical Skills</h3>
         <div class="skill-items">
-          <span class="skill-item">SQL</span>
-          <span class="skill-item">Tableau</span>
-          <span class="skill-item">Python</span>
-          <span class="skill-item">R</span>
-          <span class="skill-item">Excel</span>
-          <span class="skill-item">Data Modeling</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">R</span>
+          <span class="skill-tag">Excel</span>
+          <span class="skill-tag">HTML/PHP</span>
         </div>
       </div>
       
       <div class="skill-category">
         <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
         <div class="skill-items">
-          <span class="skill-item">Tableau Server</span>
-          <span class="skill-item">Apache Airflow</span>
-          <span class="skill-item">Jupyter</span>
-          <span class="skill-item">Git</span>
-          <span class="skill-item">Power BI</span>
-          <span class="skill-item">Google Analytics</span>
+          <span class="skill-tag">Tableau</span>
+          <span class="skill-tag">Microsoft Excel</span>
+          <span class="skill-tag">Apache Airflow</span>
+          <span class="skill-tag">Kestra</span>
+          <span class="skill-tag">TensorFlow</span>
+          <span class="skill-tag">MySQL</span>
         </div>
       </div>
       
       <div class="skill-category">
-        <h3><i class="fas fa-lightbulb"></i> Business Acumen</h3>
+        <h3><i class="fas fa-users"></i> Soft Skills</h3>
         <div class="skill-items">
-          <span class="skill-item">Strategic Analysis</span>
-          <span class="skill-item">Data Storytelling</span>
-          <span class="skill-item">Stakeholder Communication</span>
-          <span class="skill-item">Requirements Gathering</span>
-          <span class="skill-item">Project Management</span>
+          <span class="skill-tag">Problem Solving</span>
+          <span class="skill-tag">Team Collaboration</span>
+          <span class="skill-tag">Structured Documentation</span>
+          <span class="skill-tag">Feature Planning</span>
+          <span class="skill-tag">Project Management</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<section class="section-alt">
+  <div class="container">
+    <div class="section-header">
+      <h2>Achievements & <span class="highlight">Activities</span></h2>
+    </div>
+    
+    <div class="achievements-container">
+      <div class="achievement-card">
+        <h3><i class="fas fa-award"></i> Tableau Fundamentals</h3>
+        <p>Certificate of Completion (2024)</p>
+        <p class="achievement-date">Verified proficiency in Tableau dashboard creation and data visualization</p>
+      </div>
+      
+      <div class="achievement-card">
+        <h3><i class="fas fa-trophy"></i> UPLB Game Jam 2025</h3>
+        <p>Contestant</p>
+        <p class="achievement-date">University of the Philippines Los Baños • 2025</p>
+      </div>
+      
+      <div class="achievement-card">
+        <h3><i class="fas fa-users"></i> Technological Society</h3>
+        <p>Active Member</p>
+        <p class="achievement-date">November 2025 - Present • University of Santo Tomas</p>
+      </div>
+      
+      <div class="achievement-card">
+        <h3><i class="fas fa-language"></i> Language Proficiency</h3>
+        <p>English (Fluent) • Filipino (Native)</p>
+        <p class="achievement-date">Professional working proficiency in English</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="cta-section">
+    <h2>Seeking Data Analytics Internship</h2>
+    <p class="cta-text">I'm eager to apply my academic knowledge and project experience in a professional setting. I'm looking for internship opportunities where I can contribute to data-driven decision making and further develop my skills in business intelligence and analytics.</p>
+    <a href="mailto:kathleenmina8@gmail.com" class="cta-button">
+      <i class="fas fa-envelope"></i> Contact Me About Internship Opportunities
+    </a>
+  </div>
+</div>
+
 <footer>
   <div class="container">
     <div class="footer-content">
-      <div class="footer-text">
-        <h3>Let's Connect</h3>
-        <p>I'm always open to discussing new opportunities, collaborations, or just talking about data, analytics, and business intelligence.</p>
-        <p style="margin-top: 15px; font-size: 0.95rem;">Based in Manila, Philippines • Available for remote work</p>
+      <div class="footer-col">
+        <h3>Kathleen Mina</h3>
+        <p>Data Science and Analytics student specializing in business intelligence, data visualization, and dashboard optimization.</p>
+        <p>Currently seeking internship opportunities to apply my skills in a professional environment.</p>
       </div>
       
-      <div class="contact-links">
-        <a href="mailto:kathleenmina8@gmail.com" class="contact-link email">
-          <i class="fas fa-envelope"></i>
-          <span>kathleenmina8@gmail.com</span>
-        </a>
-        <a href="https://www.linkedin.com/in/kathleen-mina-0b9726267" class="contact-link linkedin">
-          <i class="fab fa-linkedin"></i>
-          <span>LinkedIn Profile</span>
-        </a>
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <div class="contact-links">
+          <a href="mailto:kathleenmina8@gmail.com" class="contact-link">
+            <i class="fas fa-envelope"></i> kathleenmina8@gmail.com
+          </a>
+          <a href="tel:+639272705933" class="contact-link">
+            <i class="fas fa-phone"></i> +63 927 270 5933
+          </a>
+          <a href="https://www.linkedin.com/in/kathleen-mina-0b9726267" class="contact-link">
+            <i class="fab fa-linkedin"></i> LinkedIn Profile
+          </a>
+          <div class="contact-link">
+            <i class="fas fa-map-marker-alt"></i> Caloocan City, Philippines
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-col">
+        <h3>Academic References</h3>
+        <p><strong>Robert Ramon S. Cruz</strong><br>
+        Department of Mathematics and Physics<br>
+        University of Santo Tomas<br>
+        rscruz@ust.edu.ph</p>
+        
+        <p><strong>Enzo Gabriel L. Castillon</strong><br>
+        Department of Mathematics and Physics<br>
+        University of Santo Tomas<br>
+        elcastillon@ust.edu.ph</p>
       </div>
     </div>
     
     <div class="copyright">
-      <p>© 2023 Kathleen Mina. All rights reserved.</p>
-      <p style="margin-top: 8px; font-size: 0.85rem;">Business Intelligence & Analytics Portfolio</p>
+      <p>© 2025 Kathleen Marie R. Mina. Data Analytics Student Portfolio.</p>
+      <p>This portfolio showcases academic projects and skills developed during my Data Science and Analytics program.</p>
     </div>
   </div>
 </footer>
 
 <script>
-  // Simple animation on scroll
+  // Simple fade-in animation on scroll
   document.addEventListener('DOMContentLoaded', function() {
-    // Add fade-in animation to elements when they come into view
     const observerOptions = {
       threshold: 0.1,
       rootMargin: '0px 0px -50px 0px'
@@ -781,16 +990,25 @@
       });
     }, observerOptions);
     
-    // Observe project cards and skill categories
-    document.querySelectorAll('.project, .skill-category, .about-box').forEach(el => {
+    // Animate project cards and skill categories
+    document.querySelectorAll('.project-card, .skill-category, .achievement-card').forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
       observer.observe(el);
     });
     
-    // Add current year to footer
-    document.querySelector('.copyright p').innerHTML = `© ${new Date().getFullYear()} Kathleen Mina. All rights reserved.`;
+    // Animate the objective card
+    const objectiveCard = document.querySelector('.objective-card');
+    if (objectiveCard) {
+      objectiveCard.style.opacity = '0';
+      objectiveCard.style.transform = 'translateY(20px)';
+      objectiveCard.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(objectiveCard);
+    }
+    
+    // Update copyright year
+    document.querySelector('.copyright p').innerHTML = `© ${new Date().getFullYear()} Kathleen Marie R. Mina. Data Analytics Student Portfolio.`;
   });
 </script>
 
