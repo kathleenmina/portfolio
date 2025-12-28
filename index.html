@@ -6,56 +6,100 @@
   <title>Kathleen Mina | Business Intelligence Portfolio</title>
 
   <style>
+    :root {
+      --primary: #1e40af;
+      --secondary: #2563eb;
+      --bg-light: #f8fafc;
+      --bg-section: #f1f5f9;
+      --text-main: #1f2933;
+      --text-muted: #6b7280;
+      --card-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text-main);
+      background: var(--bg-light);
       line-height: 1.7;
-      color: #1f2933;
-      background: linear-gradient(180deg, #f4f7fb, #ffffff);
     }
 
     /* HEADER */
     header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
-      padding: 60px 20px;
+      padding: 70px 20px 80px;
       text-align: center;
     }
 
     header h1 {
+      font-size: 2.5rem;
       margin-bottom: 10px;
-      font-size: 2.4rem;
-      letter-spacing: 0.5px;
     }
 
     header p {
-      max-width: 720px;
+      max-width: 750px;
       margin: auto;
       font-size: 1.05rem;
       opacity: 0.95;
     }
 
-    /* SECTIONS */
+    /* SECTION WRAPPERS */
     section {
-      max-width: 960px;
+      padding: 70px 20px;
+    }
+
+    .container {
+      max-width: 1000px;
       margin: auto;
-      padding: 60px 20px;
+    }
+
+    section.alt {
+      background: var(--bg-section);
     }
 
     h2 {
-      font-size: 1.6rem;
-      margin-bottom: 25px;
-      color: #1e3a8a;
+      font-size: 1.7rem;
+      margin-bottom: 30px;
+      color: var(--primary);
+      position: relative;
     }
 
-    /* PROJECT CARDS */
+    h2::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--secondary);
+      margin-top: 10px;
+      border-radius: 4px;
+    }
+
+    /* ABOUT */
+    .about-box {
+      background: white;
+      padding: 30px 35px;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+    }
+
+    /* PROJECTS */
+    .project-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
     .project {
       background: white;
-      padding: 25px 30px;
-      border-radius: 10px;
-      margin-bottom: 30px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+      padding: 28px 30px;
+      border-radius: 14px;
+      box-shadow: var(--card-shadow);
+      transition: transform 0.2s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
     }
 
     .project h3 {
@@ -67,7 +111,7 @@
 
     .tools {
       font-size: 0.9rem;
-      color: #6b7280;
+      color: var(--text-muted);
       margin-bottom: 12px;
     }
 
@@ -82,23 +126,25 @@
 
     /* SKILLS */
     .skills-box {
-      background: #f8fafc;
-      padding: 25px 30px;
-      border-radius: 10px;
-      border-left: 5px solid #2563eb;
+      background: white;
+      padding: 30px 35px;
+      border-radius: 12px;
+      box-shadow: var(--card-shadow);
+      border-left: 6px solid var(--secondary);
     }
 
     /* FOOTER */
     footer {
+      background: #0f172a;
+      color: #e5e7eb;
       text-align: center;
-      padding: 40px 20px;
-      background: #f1f5f9;
+      padding: 45px 20px;
     }
 
     footer a {
+      color: #93c5fd;
       margin: 0 12px;
       text-decoration: none;
-      color: #2563eb;
       font-weight: 500;
     }
 
@@ -112,7 +158,7 @@
         font-size: 2rem;
       }
       section {
-        padding: 40px 16px;
+        padding: 50px 16px;
       }
     }
   </style>
@@ -129,68 +175,77 @@
 </header>
 
 <section>
-  <h2>About Me</h2>
-  <p>
-    Data Science and Analytics student specializing in dashboard optimization, data visualization, and analysis.
-    Experienced in designing interactive Tableau dashboards, KPI tracking, and analytics solutions that support
-    data-driven decision-making.
-  </p>
+  <div class="container">
+    <h2>About Me</h2>
+    <div class="about-box">
+      <p>
+        Data Science and Analytics student specializing in dashboard optimization, data visualization, and analysis.
+        Experienced in designing interactive Tableau dashboards, KPI tracking, and analytics solutions that support
+        data-driven decision-making.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <h2>Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project">
+        <h3>BI Dashboards – Top 1000 Companies</h3>
+        <p class="tools">Tableau • Microsoft Excel</p>
+        <p>
+          Analyzed revenue data from the top 1,000 companies to support performance comparison and insight discovery.
+        </p>
+        <ul>
+          <li>Built ranking dashboards to compare company and industry performance</li>
+          <li>Implemented filters for focused analysis</li>
+          <li>Identified revenue concentration trends</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Online Shopping Analytics Dashboard</h3>
+        <p class="tools">Tableau • SQL • Apache Airflow</p>
+        <p>
+          Developed an automated dashboard to answer business questions and monitor platform performance.
+        </p>
+        <ul>
+          <li>Designed KPI-focused dashboards</li>
+          <li>Visualized sales trends and category performance</li>
+          <li>Automated refresh using Airflow</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <h3>Monthly Money Tracker</h3>
+        <p class="tools">Tableau • Microsoft Excel</p>
+        <p>
+          Created an interactive dashboard to analyze personal spending habits and financial trends.
+        </p>
+        <ul>
+          <li>Tracked expenses over time</li>
+          <li>Used category and date filters</li>
+          <li>Identified recurring spending patterns</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <section>
-  <h2>Projects</h2>
-
-  <div class="project">
-    <h3>Business Intelligence Dashboards – Top 1000 Companies</h3>
-    <p class="tools">Tableau • Microsoft Excel</p>
-    <p>
-      Analyzed revenue data from the top 1,000 companies across multiple industries to support performance comparison
-      and insight discovery through interactive dashboards.
-    </p>
-    <ul>
-      <li>Built Tableau dashboards to rank companies by revenue and compare industry performance</li>
-      <li>Implemented filters and rankings for focused analysis of top-performing companies</li>
-      <li>Identified revenue concentration among leading corporations</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Online Shopping Platform Analytics Dashboard</h3>
-    <p class="tools">Tableau • SQL • Apache Airflow</p>
-    <p>
-      Developed an automated analytics dashboard to answer business questions and support ongoing performance
-      monitoring for an online shopping platform.
-    </p>
-    <ul>
-      <li>Designed a dimensional data model to support KPI reporting</li>
-      <li>Visualized sales trends and category-level performance using Tableau</li>
-      <li>Automated data refresh using Apache Airflow</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <h3>Monthly Money Tracker Dashboard</h3>
-    <p class="tools">Tableau • Microsoft Excel</p>
-    <p>
-      Created an interactive dashboard to help users understand personal spending patterns and financial trends.
-    </p>
-    <ul>
-      <li>Connected Excel-based expense data to Tableau</li>
-      <li>Designed category and time-based filters for flexible exploration</li>
-      <li>Highlighted recurring expense trends</li>
-    </ul>
-  </div>
-
-</section>
-
-<section>
-  <h2>Skills</h2>
-  <div class="skills-box">
-    <p>
-      <strong>BI & Analytics:</strong> Dashboard Optimization, KPI Design, Data Visualization, Trend Analysis, Business Performance Analysis<br>
-      <strong>Technical:</strong> SQL, Tableau, Microsoft Excel, Python, R<br>
-      <strong>Tools:</strong> Tableau, Excel, Apache Airflow (supporting)
-    </p>
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skills-box">
+      <p>
+        <strong>BI & Analytics:</strong> Dashboard Optimization, KPI Design, Data Visualization, Trend Analysis, Business Performance Analysis<br>
+        <strong>Technical:</strong> SQL, Tableau, Microsoft Excel, Python, R<br>
+        <strong>Tools:</strong> Tableau, Excel, Apache Airflow (supporting)
+      </p>
+    </div>
   </div>
 </section>
 
